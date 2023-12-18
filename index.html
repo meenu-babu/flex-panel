@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name">
+
+</head>
+<body>
+    <div class="mainpanel">
+        <div class="panel" id="panel1">
+
+            <p>SHOOT</p>
+            <p>THE</p>
+            <p>MOON</p>
+        </div>
+        <div class="panel" id="panel2">
+           <p>
+            EVERYTHING
+           </p> 
+           <p>IS</p>
+           <p>
+            PRACTICE
+           </p>
+        </div>
+        <div class="panel" id="panel3">
+            <p>IN</p>
+            <p>THE</p>
+            <p>MOMENT</p>
+        </div>
+        <div class="panel" id="panel4">
+            <p>ALL</p>
+            <p>IS</p>
+            <p>WELL</p>
+        </div>
+        <div class="panel" id="panel5">
+            <p>DO</p>
+<p>IT</p>
+<p>NOW</p>
+        </div>
+    </div>
+ <script>
+     const panels = document.querySelectorAll('.panel');
+     function toggleOpen() {
+      //console.log('Hello');
+     // console.log(e.properyName);
+      this.classList.toggle('open');
+    }
+    function toggleActive(e){
+        if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+console.log(e.propertyName);
+    }
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
+
+ </script>
+</body>
+</html>
+
+
+

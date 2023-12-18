@@ -1,0 +1,91 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.mainpanel
+{
+    display:flex;
+   
+    font-size: 50px;
+   text-shadow: 2px 2px rgba(63, 63, 47, 0.7);
+    color: rgb(233, 151, 28);
+    font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Caveat', cursive;
+font-family: 'Merienda', cursive;
+  
+   
+}
+.panel{
+
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+flex:1;
+
+transition:all .5s;
+
+
+}
+.panel > *
+{
+    margin:0;
+flex:1 0 auto;
+display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform .8s;
+      
+
+}
+#panel1
+{
+    background-image: url(https://images.pexels.com/photos/19294191/pexels-photo-19294191/free-photo-of-hot-air-balloons-flying-over-a-highway.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+
+}
+#panel2
+{
+   background-image: url(https://images.pexels.com/photos/3041347/pexels-photo-3041347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); 
+
+}
+#panel3
+{
+    background-image: url(https://images.pexels.com/photos/3783385/pexels-photo-3783385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+
+}
+#panel4
+{
+    background-image: url(https://images.pexels.com/photos/1353242/pexels-photo-1353242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+#panel5
+{
+    background-image: url(https://images.pexels.com/photos/3222686/pexels-photo-3222686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
+ .panel p:nth-child(2)
+ {
+    font-size: 2em;
+  }
+.panel p:first-child
+{
+    transform:translateY(-100%);
+}
+.panel p:last-child{
+    transform:translateY(100%);
+}
+.panel.open-active p:first-child
+ { 
+    transform: translateY(0); 
+}
+.panel.open-active p:last-child
+ { 
+    transform: translateY(0);
+ }
+
+.panel.open {
+    flex: 5;
+    font-size: 60px;
+}
